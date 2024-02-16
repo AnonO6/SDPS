@@ -18,7 +18,10 @@
     public void setAuthorizationLevel(int authorizationLevel) {
         this.authorizationLevel = authorizationLevel;
     }
-
+    //Method to verify password
+    public void authSet(String password, int authorizationLevel) {
+        // password verification code 
+    }
     // Method to print agent details
     public void printDetails() {
         System.out.println("Agent Details:");
