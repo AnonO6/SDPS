@@ -1,5 +1,5 @@
 // Class representing a person in the role of a passenger
-abstract class Passenger extends PersonRole {
+ class Passenger extends PersonRole {
     private String frequentFlyerID;
     private String reservation;
 
@@ -9,7 +9,7 @@ abstract class Passenger extends PersonRole {
         this.reservation = reservation;
     }
 
-    // Getter and setter methods for FrequentFlyerID
+    // Getter and setter methods to ensure encapsulation
     public String getFrequentFlyerID() {
         return frequentFlyerID;
     }
@@ -18,7 +18,6 @@ abstract class Passenger extends PersonRole {
         this.frequentFlyerID = frequentFlyerID;
     }
 
-    // Getter and setter methods for reservation
     public String getReservation() {
         return reservation;
     }
@@ -27,9 +26,8 @@ abstract class Passenger extends PersonRole {
         this.reservation = reservation;
     }
 
-    // Method to verify passenger ID
     public boolean verification(String id) {
-        // Add verification logic here
+        // Verification logic here
         return false; // Placeholder return
     }
 }

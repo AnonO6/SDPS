@@ -1,16 +1,15 @@
-abstract class PersonRole implements Person {
+ abstract class PersonRole implements Person {
     private String name;
     private String address;
     private String role;
 
-    // Constructor
     public PersonRole(String name, String address, String role) {
         this.name = name;
         this.address = address;
         this.role = role;
     }
 
-    // Getter and setter methods for name
+    // Getter and setter methods to ensure encapsulation
     public String getName() {
         return name;
     }
@@ -19,7 +18,6 @@ abstract class PersonRole implements Person {
         this.name = name;
     }
 
-    // Getter and setter methods for address
     public String getAddress() {
         return address;
     }
@@ -28,7 +26,6 @@ abstract class PersonRole implements Person {
         this.address = address;
     }
 
-    // Getter and setter methods for role
     public String getRole() {
         return role;
     }
@@ -36,4 +33,31 @@ abstract class PersonRole implements Person {
     public void setRole(String role) {
         this.role = role;
     }
+
+    /*
+     * below is required because subclasses of abstract class PersonRole
+     * have to implement all the methods in interface Person, however
+     * this Violates Interface Segregation Principle, this can be solved 
+     * by dividing Person interface into multiple interfaces.
+     */
+
+
+     // Default implementation of authSet method from Person interface
+     @Override
+     public void authSet(String password, int authorizationLevel) {
+         // Default implementation if needed
+     }
+ 
+     // Default implementation of printDetails method from Person interface
+     @Override
+     public void printDetails() {
+         // Default implementation if needed
+     }
+ 
+     // Default implementation of verification method from Person interface
+     @Override
+     public boolean verification(String id) {
+         // Default implementation if needed
+         return false; // Placeholder return
+     }
 }

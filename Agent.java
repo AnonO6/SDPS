@@ -1,5 +1,5 @@
 // Class representing a person in the role of an agent
-abstract class Agent extends PersonRole {
+ class Agent extends PersonRole {
     private String password;
     private int authorizationLevel;
 
