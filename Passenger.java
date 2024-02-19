@@ -27,7 +27,8 @@
     }
 
     public boolean verification(String id) {
-        // Verification logic here
+        if(this.frequentFlyerID == id)
+            return true;
         return false; // Placeholder return
     }
 }
